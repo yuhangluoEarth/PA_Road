@@ -7,7 +7,6 @@ library(lme4)
 library(ggeffects)
 library(DHARMa)
 load('Roadkill_Data.RData')
-Road.kill.data <- Roadkill.data
 #################
 glmm <- glmer.nb(RoadKill_s ~ Protected + roadTypeA2 +LCmax_8 + water_Dist +Pop_dist +TreeCover + DEM+Slope+ (1 | RoadID2), 
                  data = Road.kill.data)
